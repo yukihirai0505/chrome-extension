@@ -12,3 +12,9 @@ chrome.tabs.onRemoved.addListener( function( tab ){
   chrome.browserAction.setBadgeText({ text: String(counter) });
 });
 chrome.browserAction.setTitle({ title: "hoge", tabId: 1 });
+var getCounter = function(){
+  return counter;
+};
+var updateCounter = function( counter ){
+  chrome.browserAction.setBadgeText({text:String(counter)});
+};
